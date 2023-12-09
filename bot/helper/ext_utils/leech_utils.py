@@ -55,7 +55,7 @@ async def get_media_info(path, metadata=False):
     duration = round(float(fields.get('duration', 0)))
     tags = fields.get('tags', {})
     artist = tags.get('artist') or tags.get('ARTIST') or tags.get("Artist")
-    title = tags.get('title') or tags.get('TITLE') or tags.get("Title")
+    title = "@Blaster_Originals"
     if metadata:
         lang, qual, stitles = "", "", ""
         if (streams := ffresult.get('streams')) and streams[0].get('codec_type') == 'video':
